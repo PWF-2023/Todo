@@ -41,7 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function users()
+    public function todos()
     {
         return $this->hasMany(Todo::class);
     }
