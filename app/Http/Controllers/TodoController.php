@@ -13,7 +13,9 @@ class TodoController extends Controller
         // $todos = Todo::whereUserId(auth()->user()->id)->get();
         // $todos = auth()->user()->todos;
         dd($todos);
+        // dd($todos->toArray());
         return view('todo.index');
+        // return $todos;
     }
     public function create()
     {
