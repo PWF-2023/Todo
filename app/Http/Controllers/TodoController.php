@@ -12,8 +12,12 @@ class TodoController extends Controller
         $todos = Todo::where('user_id', auth()->user()->id)->get();
         // $todos = Todo::whereUserId(auth()->user()->id)->get();
         // $todos = auth()->user()->todos;
+
+        // $todos = Todo::where('user_id', auth()->user()->id)->with('user')->get();
+
         dd($todos);
         // dd($todos->toArray());
+
         return view('todo.index');
         // return $todos;
     }
